@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5002;
 // Enable All CORS Requests
 app.use(
   cors({
-    origin: '*',
+    origin: [process.env.CLIENT_URL, process.env.CHATBOT_URL],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
